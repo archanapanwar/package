@@ -1,4 +1,4 @@
-orif [ $(dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -c "ok installed") -eq 1 ]; 
+if [ $(dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -c "ok installed") -eq 1 ]; 
 	then
 		echo "$1 is already installed. "
 		echo  "Removing installed $pkg"
