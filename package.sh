@@ -12,7 +12,7 @@ read -p "$1 is not installed. Answer y/n if want installation_ " request
 		echo -ne  '###### installing $pkg \r'
 		sudo apt-get update	
 		sudo apt-get install $1
-		echo  "nginx installed Successfully"
+		echo  "$1 installed Successfully"
 		sudo systemctl status $1
 	fi
 fi
